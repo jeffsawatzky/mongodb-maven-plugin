@@ -5,6 +5,7 @@ Run create/populate/update scripts on multiple mongo databases as part of your m
 ## Usage
 
 By default the plugin will look for the javascript files in the following folders:
+
 	src/main/mongodb/<db>/create/
 	src/main/mongodb/<db>/populate/
 	src/main/mongodb/<db>/update/
