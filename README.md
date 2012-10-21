@@ -5,9 +5,9 @@ Run create/populate/update scripts on multiple mongo databases as part of your m
 ## Usage
 
 By default the plugin will look for the javascript files in the following folders:
-	${basedir}/src/main/mongodb/<db>/create/
-	${basedir}/src/main/mongodb/<db>/populate/
-	${basedir}/src/main/mongodb/<db>/update/
+	src/main/mongodb/<db>/create/
+	src/main/mongodb/<db>/populate/
+	src/main/mongodb/<db>/update/
 
 The best way I have found to use it is to configure the plugin properties in the build/pluginManagement section. That way you can execute the plugin easily from the command line or through the pom.
 
