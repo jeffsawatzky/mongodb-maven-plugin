@@ -16,7 +16,7 @@
  * CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
  * DEALINGS IN THE SOFTWARE.
  */
-package com.github.niltz.maven2.mongodb;
+package com.github.niltz.maven.plugins.mongodb;
 
 /**
  * Class for storing database connection settings.

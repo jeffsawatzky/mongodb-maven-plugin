@@ -16,7 +16,7 @@
  * CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
  * DEALINGS IN THE SOFTWARE.
  */
-package com.github.niltz.maven2.mongodb;
+package com.github.niltz.maven.plugins.mongodb;
 
 import java.io.IOException;
 
@@ -27,11 +27,11 @@ import com.mongodb.DB;
 import com.mongodb.Mongo;
 
 /**
- * Mojo for filling databases with optional data.
+ * Mojo for creating a fresh databases with required data.
  * 
- * @goal populate
+ * @goal create
  */
-public class MongoDBPopulateMojo extends AbstractMongoDBMojo {
+public class MongoDBCreateMojo extends AbstractMongoDBMojo {
 
 	/**
 	 * {@inheritDoc}
@@ -42,17 +42,17 @@ public class MongoDBPopulateMojo extends AbstractMongoDBMojo {
 		try {
 			for (int i = 0; i < getDatabaseSettings().length; i++) {
 				DatabaseSettings databaseSettings = getDatabaseSettings()[i];
-				getLog().info("Populating '" + databaseSettings.getConnectionSettings().getDatabase() + "'");
+				getLog().info("Creating '" + databaseSettings.getConnectionSettings().getDatabase() + "'");
 
 				ConnectionSettings connectionSettings = databaseSettings.getConnectionSettings();
 				Mongo mongo = openConnection(connectionSettings);
 				DB db = getDatabase(connectionSettings, mongo);
 
-				executeScriptsInDirectory(connectionSettings, "populate", db, new String[0]);
+				executeScriptsInDirectory(connectionSettings, "create", db, new String[0]);
 			}
 
 		} catch (IOException ioe) {
-			throw new MojoExecutionException("Error executing populate database scripts", ioe);
+			throw new MojoExecutionException("Error executing create database scripts", ioe);
 		}
 	}
 }
