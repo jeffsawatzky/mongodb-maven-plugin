@@ -270,6 +270,21 @@ Full-Width Styles
   margin: 0 auto;
 }
 
+#user_banner {
+  display: block;
+  position: absolute;
+  top:0;
+  left: 10px;
+  z-index: 10;
+  padding: 10px 10px 10px 10px;
+  color: #fff;
+  background: #0090ff;
+  font-weight: 700;
+  box-shadow: 0 0 10px rgba(0,0,0,.5);
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
 #forkme_banner {
   display: block;
   position: absolute;
