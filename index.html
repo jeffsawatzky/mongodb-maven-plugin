@@ -1,59 +1,122 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
-		<meta charset='utf-8' />
-		<meta http-equiv="X-UA-Compatible" content="chrome=1" />
-		<meta name="description" content="mongodb-maven-plugin : A maven plugin to automate the creation, population, and updating of mongo databases" />
-
-		<link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
+		<meta charset="utf-8">
 		<title>mongodb-maven-plugin</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="mongodb-maven-plugin : A maven plugin to automate the creation, population, and updating of mongo databases" />
+		<meta name="author" content="Jeff Sawatzky">
+		<meta name="keywords" content="maven, mongo, mongodb, plugin, create, update, delete" />
+		
+		<link href="./css/bootstrap.min.css" rel="stylesheet">
+		<style type="text/css">
+			body {
+				padding-top: 60px;
+				padding-bottom: 40px;
+			}
+			
+			#download {
+				float: right;	
+			}
+			
+			#zip_download_link {
+				display: block;
+				float: right;
+				width: 90px;
+				height:70px;
+				text-indent: -5000px;
+				overflow: hidden;
+				background: url(./img/sprite_download.png) no-repeat bottom left;
+			}
+			
+			#tar_download_link {
+				display: block;
+				float: right;
+				width: 90px;
+				height:70px;
+				text-indent: -5000px;
+				overflow: hidden;
+				background: url(./img/sprite_download.png) no-repeat bottom right;
+				margin-left: 10px;
+			}
+			
+			#zip_download_link:hover {
+				background: url(./img/sprite_download.png) no-repeat top left;
+			}
+			
+			#tar_download_link:hover {
+				background: url(./img/sprite_download.png) no-repeat top right;
+			}
+		</style>
+		<link href="./css/bootstrap-responsive.min.css" rel="stylesheet">
+		<link href="./css/project.css" rel="stylesheet">
+
+		<!--[if lt IE 9]>
+		<script src="./js/html5.js"></script>
+		<![endif]-->
 	</head>
 
 	<body>
 
-		<!-- HEADER -->
-		<div id="header_wrap" class="outer">
-				<header class="inner">
-					<a id="user_banner" href="http://niltz.github.com">niltz's designs</a>
-					<a id="forkme_banner" href="https://github.com/niltz/mongodb-maven-plugin">View on GitHub</a>
-
-					<h1 id="project_title">mongodb-maven-plugin</h1>
-					<h2 id="project_tagline">A maven plugin to automate the creation, population, and updating of mongo databases</h2>
-
-						<section id="downloads">
-							<a class="zip_download_link" href="https://github.com/niltz/mongodb-maven-plugin/zipball/master">Download this project as a .zip file</a>
-							<a class="tar_download_link" href="https://github.com/niltz/mongodb-maven-plugin/tarball/master">Download this project as a tar.gz file</a>
-						</section>
-				</header>
+		<div class="navbar navbar-fixed-top">
+			<div class="navbar-inner">
+				<div class="container">
+					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</a>
+					<a class="brand" href="http://niltz.github.com">niltz's designs</a>
+					<div class="nav-collapse">
+						<ul class="nav">
+							<li><a href="http://niltz0.wordpress.com/">Blog</a></li>
+							<li><a href="http://twitter.com/niltz0">Follow</a></li>
+						</ul>
+					</div><!--/.nav-collapse -->
+				</div>
+			</div>
 		</div>
 
-		<!-- MAIN CONTENT -->
-		<div id="main_content_wrap" class="outer">
-			<section id="main_content" class="inner">
+		<div class="container">
+
+			<!-- Main hero unit for a primary marketing message or call to action -->
+			<div class="hero-unit">
 				<h1>mongodb-maven-plugin</h1>
-		<p>Run create/populate/update scripts on multiple mongo databases as part of your maven build. This is useful for continuous integration servers. It can also generate a combined file of all updates applied to a database, which is useful for providing operations with a single update script for the production database.</p>
-			</section>
-		</div>
-
-		<!-- FOOTER	-->
-		<div id="footer_wrap" class="outer">
-			<footer class="inner">
-				<p class="copyright">mongodb-maven-plugin maintained by <a href="https://github.com/niltz">niltz</a></p>
+				<p>A maven plugin to automate the creation, population, and updating of mongo databases</p>
+				<p>
+					<a href="https://github.com/niltz/mongodb-maven-plugin" class="btn btn-primary btn-large"><img src="./img/blacktocat.png" alt="cat" /> Fork me on GitHub »</a>
+					
+					<a id="zip_download_link" href="https://github.com/niltz/mongodb-maven-plugin/zipball/master">Download this project as a .zip file</a>
+					<a id="tar_download_link" href="https://github.com/niltz/mongodb-maven-plugin/tarball/master">Download this project as a tar.gz file</a>
+					<img id="download" src="./img/icon_download.png" alt="" />
+				</p>
+			</div>
+						
+			<div class="row">
+				<div class="span12">
+					<p>Run create/populate/update scripts on multiple mongo databases as part of your maven build. This is useful for continuous integration servers. It can also generate a combined file of all updates applied to a database, which is useful for providing operations with a single update script for the production database.</p>
+				</div>
+			</div>
+						
+			<footer>
+				<p>mongodb-maven-plugin maintained by <a href="https://github.com/niltz">niltz</a></p>
 			</footer>
+			
 		</div>
-
-	<!-- Google Analytics -->
-	<script type="text/javascript">
-		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-	</script>
-	<script type="text/javascript">
-		try {
-			var pageTracker = _gat._getTracker("UA-37144494-1");
-			pageTracker._trackPageview();
-		} catch(err) {}
-	</script>
-	
+		
+		<script src="./js/jquery-1.7.1.min.js"></script>
+		<script src="./js/bootstrap.min.js"></script>
+		
+		<!-- Google Analytics -->
+		<script type="text/javascript">
+			var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+			document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+		<script type="text/javascript">
+			try {
+				var pageTracker = _gat._getTracker("UA-37144494-1");
+				pageTracker._trackPageview();
+			} catch(err) {}
+		</script>
 	</body>
 </html>
